@@ -1,2 +1,0 @@
-# WellNest
-Created with CodeSandbox
