@@ -1,0 +1,29 @@
+:root { --bg:#f3f8f6; --card:#fff; --text:#1d2b27; --muted:#4a5c56; --accent:#1f6f5c; --accent-dark:#154d40; --warn:#fff4d6; --border:#c5d6d0; }
+* { box-sizing: border-box; }
+body { margin:0; font-family: system-ui, "Segoe UI", Arial, sans-serif; background:var(--bg); color:var(--text); line-height:1.5; }
+.skip { position:absolute; left:-999px; }
+.skip:focus { left:8px; top:8px; background:#fff; padding:8px; z-index:10; }
+.site-header, main, footer { max-width:760px; margin:0 auto; padding:16px; }
+h1 { margin:0; color:var(--accent-dark); }
+h2 { color:var(--accent-dark); margin-top:0; }
+section { background:var(--card); border:1px solid var(--border); border-radius:10px; padding:16px; margin-bottom:16px; }
+.notice { background:var(--warn); border-left:4px solid #b8860b; padding:8px 12px; }
+nav ul { display:flex; gap:12px; list-style:none; padding:0; flex-wrap:wrap; }
+nav a { display:inline-block; padding:8px 12px; background:var(--accent); color:#fff; border-radius:6px; text-decoration:none; }
+.field { display:grid; gap:4px; margin-bottom:14px; }
+label { font-weight:600; }
+input, select { font:inherit; padding:8px; border:1px solid #7a8f88; border-radius:6px; width:100%; }
+button { font:inherit; background:var(--accent); color:#fff; border:0; padding:10px 16px; border-radius:6px; cursor:pointer; margin:4px 4px 4px 0; }
+button:hover { background:var(--accent-dark); }
+button.secondary { background:#fff; color:var(--accent-dark); border:1px solid var(--accent); }
+:focus-visible { outline:3px solid #ffb703; outline-offset:2px; }
+.progress, .reminders { list-style:none; padding:0; }
+.progress li, .reminders li { padding:8px 0; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; gap:8px; align-items:center; flex-wrap:wrap; }
+.cards { display:grid; gap:12px; grid-template-columns:1fr; }
+.card { border:1px solid var(--border); border-radius:8px; padding:12px; }
+.card h3 { margin:0 0 4px; }
+.tag { font-size:.85rem; color:var(--muted); }
+#reminder-alert { font-weight:700; color:var(--accent-dark); }
+footer { color:var(--muted); font-size:.9rem; }
+@media (min-width:640px) { .cards { grid-template-columns:1fr 1fr; } }
+@media (prefers-reduced-motion: reduce) { * { transition:none !important; } }

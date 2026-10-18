@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Daily Wellness Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Daily Wellness Tracker</h1>
+    <p class="subtitle">Track your healthy habits every day.</p>
+
+    <div class="card">
+      <h2>Water Intake</h2>
+      <p><span id="water-count">0</span> glasses</p>
+      <button onclick="changeWater(1)">+ Add</button>
+      <button onclick="changeWater(-1)">- Remove</button>
+    </div>
+
+    <div class="card">
+      <h2>Exercise</h2>
+      <input type="number" id="exercise" placeholder="Minutes of exercise" min="0">
+    </div>
+
+    <div class="card">
+      <h2>Sleep</h2>
+      <input type="number" id="sleep" placeholder="Hours of sleep" min="0" max="24">
+    </div>
+
+    <div class="card">
+      <h2>Daily Habits</h2>
+      <ul>
+        <li><input type="checkbox" class="habit"> Eat a healthy breakfast</li>
+        <li><input type="checkbox" class="habit"> Take a short walk</li>
+        <li><input type="checkbox" class="habit"> Study break / stretch</li>
+        <li><input type="checkbox" class="habit"> Sleep before midnight</li>
+      </ul>
+    </div>
+
+    <button class="save" onclick="saveData()">Save Today's Progress</button>
+    <p id="message"></p>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
